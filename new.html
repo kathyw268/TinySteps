@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TinySteps</title>
+	<!-- META -->
+	<meta charset="utf-8">
+    <!--Make sure that default is not zoomed in and that users can not pinch and zoom-->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+	<link rel="stylesheet" href="css-main.css">
+
+</head>
+
+<body onload="pageSetUp()">
+	<!-- PAGE CONTENT -->
+<div id="wrapper">	
+    <div id="content">
+    <form id="add-goal" action="" method="get">
+<p class="motto">I will <input type="text" class="blank" name="goalName"/> everyday</p>
+    <!--<input type="submit" class="large-btn" value="First Step">-->
+    <button id="submit" type="submit" class="large-btn">Start</button>
+    <a href="#" onclick="jmp2LocalPage('index.html')" class="large-btn">Cancel</a>
+    </form>
+</div>
+	<!-- JAVASCRIPT-->
+	<script src="js-main.js"></script>
+
+
+</div>
+</body>
+
+</html>

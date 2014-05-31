@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<html lang="en" manifest="cache.manifest">-->
+
+<head>
+	<title>TinySteps</title>
+	<!-- META -->
+	<meta charset="utf-8">
+    <!--Make sure that default is not zoomed in and that users can not pinch and zoom-->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script src="jquery-1.10.1.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:700,700italic' rel='stylesheet' type='text/css'>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+    <link rel="stylesheet" href="css-add2home.css">
+	<link rel="stylesheet" href="css-main.css">
+	<!-- iPhone ICON -->
+	<link rel="apple-touch-icon" href="img/icon-57x57.png" sizes="57x57" >
+	<!-- iPhone ICON (Retina) -->
+	<link rel="apple-touch-icon" href="img/icon-114x114.png" sizes="114x114" >
+	<!-- iPhone SPLASHSCREEN -->
+	<link
+		rel="apple-touch-startup-image"
+		href="img/startup-320x460.png"
+		media="(device-width: 320px)" >
+	<!-- iPhone SPLASHSCREEN (Retina) -->
+	<link
+		rel="apple-touch-startup-image"
+		href="img/startup-640x920.png"
+		media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" >
+	<!-- iPhone SPLASHSCREEN (Retina 5) -->
+	<link
+		rel="apple-touch-startup-image"
+		href="img/startup-640x1096.png"
+		media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" >
+</head>
+
+<body onload="pageSetUp()">
+	<!-- PAGE CONTENT -->
+<div id="wrapper">	
+    <div id="content">
+    <div id="home">
+    <h1><span class="tiny">Tiny</span>Steps</h1>
+    <a href="#" class="square-btn"><img src="img/menu-icon.png"></a>
+    <ul class="menu">
+        <li><a href="#">Edit</a></li>
+        <li><a href="#" id="clear">Clear All</a></li>
+        <li><a href="#">Move</a></li>
+    </ul>
+    <a href="#" class="large-btn new-goal show-new">+ New Goal</a>
+<div class="all-goals">  
+
+</div>
+</div>
+    <div id="new-page">
+    <form id="add-goal" action="" method="get">
+<p class="motto">My goal is to<input type="text" class="blank" name="goalName"/>everyday.</p>
+    <button id="submit" type="submit" class="large-btn">Start</button>
+    <a href="#" class="large-btn go-home">Cancel</a>
+    </form>
+</div>
+    
+            <div id="complete-page">
+    <img class="check" src="img/greenCheck.png"/>
+    <p class="completed">Completed!</p>
+    <a href="#" id="photo" class="large-btn">Upload a Photo</a>
+    <a href="#" id="video" class="large-btn">Upload a Video</a>
+    <a href="#" id="text" class="large-btn note">Write a Note</a>
+    <div class="popup-note">
+        <form id="note" action="" method="get">
+            <textarea></textarea>
+            <button id="submit" type="submit" class="large-btn">Submit</button>
+            <a href="#" class="large-btn go-home">Cancel</a>
+        </form>
+        
+    </div>
+    <a href="#" id="skip" class="small-btn go-home">Skip</a>
+    </div>    
+    
+</div>
+</div>
+	 
+	 <div id="widescreen">
+        <img src="img/phone.gif" alt="rotating phone"/>
+        <p>TinySteps is best viewed in portrait mode. Rotate your phone for the best view. </p>
+    </div> 
+	
+	<!-- JAVASCRIPT-->
+	<script src="js-refresh-manifest.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	    //customize config vars before loading add2home.js
+	    var addToHomeConfig = {
+	    touchIcon: true,
+	    message: 'Like this? Install it on your %device. Tap %icon and <strong>Add to Home</strong>',
+	    };
+	</script>
+	<script src="js-add2home.js"></script>
+	<script src="js-main.js"></script>
+
+
+
+</body>
+
+</html>
