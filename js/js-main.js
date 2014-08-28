@@ -1,9 +1,56 @@
+var homeView = {
+    init: function(){
+        homeView.getPages();
+        homeView.menu();
+    },
+
+    menu: function(){
+        $('.square-btn').click(function(){
+            $('.menu').toggle();
+        }); 
+    },
+
+    getPages:function(){
+        // Make switch statement for each page and show/hide accordingly 
+
+        $('.note').click(function(){
+            $('.popup-note').show();
+        });
+
+        var goHome = function(){
+            location.reload(true);
+        };
+        $('.go-home').click(goHome); 
+
+        $('.show-new').click(function(){
+            $('#new-page').show();
+            $('#home').hide();
+        });
+    }
+
+};
+
+var goalView ={
+    // set up handlebars and local storage
+    format: function(){
+
+    },
+    load: function(){
+        var source   = $("#goal-template").html();
+        var template = Handlebars.compile(source);
+
+    },
+    save: function(){
+
+    }
+};
+
+
+
 function pageSetUp() {
 }
 
-function jmp2LocalPage(whichPage){
-    location.href= whichPage;
-}
+
 
 $(document).ready(function(){
     
