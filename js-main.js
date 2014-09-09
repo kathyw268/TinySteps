@@ -91,13 +91,11 @@ var storedNames = JSON.parse(localStorage["goalName"]);
         console.log('this works');
         alert('You completed your first step by defining your goal. Congrats!')
     });
-    $('li.last').click(function(){
-        var n = $(this).parent().index('.goal-list');
-        goalData[n]= [storedNames[n],storedStatus[n]];   
+    $('li.last').click(function(){  
         $('#complete-page').show();
         $('#home').hide();
         $('#skip').click(function(){
-        complete[n].push('nodata');
+
         localStorage.setItem('complete', JSON.stringify(complete));
         getStatus;    
     });
